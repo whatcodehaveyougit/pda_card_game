@@ -31,11 +31,16 @@ class CardGame
 end
 end
 
+# This does not need the self, not a class method
 def self.cards_total(cards)
   total
+  # Total shoudl = 0
   for card in cards
     total += card.value
     return "You have a total of" + total
+    # Put the return statement outside the for loop
+    # Otherwise it won't be able to loop which is a problem!
+    # Need to convert total to a string from an integer
   end
 end
 ```
