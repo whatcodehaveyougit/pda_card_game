@@ -22,8 +22,9 @@ class CardGame
   dif highest_card(card1 card2)
   #
   if card1.value > card2.value
-    # Here it should say card 1
+    # Here it should say card 1  
     return card
+    # It should also be returning the value surely, not the entire object!
   else
     return card2
   end

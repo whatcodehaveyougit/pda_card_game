@@ -12,6 +12,9 @@ class TestCardGame < Minitest::Test
 
     @card1 = Card.new("clubs", 4)
     @card2 = Card.new("spades", 1)
+    @card3 = Card.new("spades", 10)
+
+    @cards = [@card1, @card2, @card3]
   end
 
   def test_checkforAce_false
@@ -24,6 +27,15 @@ class TestCardGame < Minitest::Test
     assert_equal(true, result)
   end
 
+  def test_higest_card
+    result = @cardgame1.highest_card(@card1, @card2)
+    assert_equal(4, result)
+  end
+
+  def test_cards_total
+    result = @cardgame1.cards_total(@cards)
+    assert_equal("You have a total of 15", result)
+  end
 
 
   end
